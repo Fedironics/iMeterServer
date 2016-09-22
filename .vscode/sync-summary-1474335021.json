@@ -1,0 +1,31 @@
+{
+    "_readMe": "Review list of sync operations, then use Ftp-sync: Commit command to accept changes",
+    "_warning": "This file should not be saved, reopened review file won't work!",
+    "filesToUpdate": [],
+    "filesToAdd": [
+        "404.shtml",
+        "about.html",
+        "blog.html",
+        "check_user.php",
+        "connect.php",
+        "contacts.html",
+        "css/animate.css",
+        "css/camera.css",
+        "css/contact-form.css",
+        "css/grid.css",
+        "css/ie.css",
+        "css/isotope.css",
+        "css/owl.carousel.css",
+        "css/style.css",
+        "css/touchTouch.css"
+         ],
+    "dirsToAdd": [],
+    "filesToRemove": [
+        ".vscode/ftp-sync.json",
+        ".vscode/sync-summary-1474333193.json",
+        ".vscode/sync-summary-1474334617.json"
+    ],
+    "dirsToRemove": [
+        ".vscode"
+    ]
+}

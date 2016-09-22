@@ -1,0 +1,95 @@
+#bgimg {background-image: url(../images/abstract-electric-circuit-digital-brain-technology-concept-vector-illustration-48306788.jpg);background-size: 100%;border-radius: 0 0 45% 45%;}
+#username {
+    width: 72%;
+}
+#password {
+    width: 47%;
+}
+#send {
+    border-radius: 15%;
+    width: 32%;
+    height: 51px;
+    font-size: 21px;
+    font-weight: bold;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+#logo{
+    display: block;
+    width: 70%;
+    height: 53px;
+    margin: auto;
+}
+input {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+    padding: 2.5% 0;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: monospace;
+}
+header{
+    padding: 2%;
+    background: white;
+    /* position: fixed; */
+    /* height: 59px; */
+    opacity: inherit;
+}
+.rowing {padding: 20px 0;color: white;text-align: center;font-size: 22px;}
+.lined {
+    border-bottom: 1px solid gainsboro;
+    clear: both;
+}
+#bgimg * {
+display:block;
+margin:auto;}
+.pull-left{
+    width: 50%;
+    text-align: center;
+    height: 181px;
+    font-size: 22px;
+    border-right: 1px solid gainsboro;
+}
+#about {
+    background-image: url(../images/about.png);
+    background-size: 54%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#help {
+background-image: url(../images/help.png);
+    background-size: 54%;
+    background-position: center;
+    background-repeat: no-repeat;}
+	#contact {
+background-image: url(../images/contact.png);
+    background-size: 54%;
+    background-position: center;
+    background-repeat: no-repeat;}
+	#share {
+background-image: url(../images/share.png);
+    background-size: 54%;
+    background-position: center;
+    background-repeat: no-repeat;}
+#fire{
+    background-image: url(../images/fedironic.jpg);
+    height: 356px;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    background-size: 84% 107%;
+    opacity: 0.2;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+	
+	
+	
+	
+	
+	
+	
