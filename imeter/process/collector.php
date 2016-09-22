@@ -32,6 +32,10 @@ class MeterMessage {
         if(empty($this->data->message_type))
             {
             $this->state=99;
+            } 
+		if(empty($this->data->key))
+            {
+            $this->state=15;
             }
          else if(empty($this->data->meter_no))
          {
@@ -276,7 +280,7 @@ public function display($value)
 {
     $this->response['response']=$value;
     empty($this->message)?null:$this->response['data']=$this->message;
-    $this->response['key']=random_string(5);
+    empty($this->data->key)?null:$this->response['key']=$this->data->key;
     $this->show(json_encode($this->response));
 }
 public function show($value)
