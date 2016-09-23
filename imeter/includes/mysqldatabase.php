@@ -31,7 +31,7 @@ class MySqlDatabase {
   }
     }
     public function  query($sql){
-    //    echo $sql."<br/>";
+     //   echo $sql."<br/>"; 
         //' OR id='1
             $result=$this->connection->query($sql);
             $this->_confirm_query($result);
