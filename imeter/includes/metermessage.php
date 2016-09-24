@@ -22,7 +22,7 @@ class MeterMessage {
                     }
     return    $collected;
     }
-
+ 
     public function  process($collector=true)
         {
         global $database,$meter_no;
@@ -285,10 +285,9 @@ public function display($value)
 }
 public function show($value)
 {
-    echo 'show MeterMessage called';
     $content_length=strlen($value);
     header("Content-Length: $content_length");
-    return $value;
+    return $value; 
 } 
 public function refresh()
 {

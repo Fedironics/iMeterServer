@@ -41,11 +41,11 @@ require_once 'includes/initialize.php' ;
 
     <form action="process/logins.php" method="post">
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" name='userid' placeholder="UserId">
+        <input type="text" class="form-control" value='fedizero' name='userid' placeholder="UserId">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" name='password' class="form-control" placeholder="Password">
+        <input type="password" name='password' value='open' class="form-control" placeholder="Password">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
@@ -73,7 +73,7 @@ require_once 'includes/initialize.php' ;
     </div>
     <!-- /.social-auth-links -->
 
-    <a href="alogin.php">Login As ADmin</a><br>
+    <a href="alogin.php">Login As Admin</a><br>
     <a href="restore_pass.php">I forgot my password</a><br>
 
   </div>

@@ -28,7 +28,7 @@ require_once('includes/initialize.php')
 </head>
 <body class="hold-transition login-page">
 <?php 
- $email='';
+ $email='fedi';
  if(isset($_SESSION['user_id'])){
 	 $user=$_SESSION['user_id'];
  }
@@ -58,7 +58,7 @@ require_once('includes/initialize.php')
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" name='password' class="form-control" placeholder="Password">
+        <input type="password" name='password' value='fedi' class="form-control" placeholder="Password">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
