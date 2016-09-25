@@ -34,7 +34,7 @@
   <img src='images/imeter.jpg' style='width:80%;display:block;margin:auto'/>
     <p class="login-box-msg">...intelligence in electricity metering</p>
 
-    <form action="process/refresher.php" method="post">
+    <form action="process/collector.php" method="post">
       <div class="form-group has-feedback">
         <input type="text" class="form-control" name='Password' value='' placeholder="message">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>

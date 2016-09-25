@@ -17,11 +17,9 @@ if(!isset($_POST['e_budget'])){
 	}
 	
 	else {
-		echo $meter_no.'<br/>';
 $insert=$mysqli->query("INSERT INTO user_queries (meter_no,energy_budget,topup_code,payment_method,amount_paid,query_code,done,time_requested) VALUES('$meter_no','$energy_budget','','','','1','1',NOW())");		
-		
-echo $mysqli->error;		
-		
+			
+		redirect_to("../energy_profile.php");
 		
 	}
 	

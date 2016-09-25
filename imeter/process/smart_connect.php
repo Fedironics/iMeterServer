@@ -33,7 +33,7 @@ $reply="Smart Connect : Succesfully Turned Power Off";
 $insert=$database->query("INSERT INTO user_queries (meter_no,energy_budget,topup_code,payment_method,amount_paid,query_code,done,time_requested) VALUES('$meter_no','','','$status','','3','0',NOW())");		
 $query_id=$database->last_id();
 Response::record($formatted_reply,$query_id);
-
+ 
 	}
 		
 	}

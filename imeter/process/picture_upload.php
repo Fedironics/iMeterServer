@@ -59,7 +59,7 @@ $image->save($regs);
 }	
 }
 
-
+redirect_to('../index.php');
 
 
 

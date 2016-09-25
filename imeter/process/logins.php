@@ -20,7 +20,7 @@ redirect_to("../login.php");
 exit();
 }
 
-
+ 
 }
 elseif(isset($_POST['muserid']) || isset($_POST['mpassword'])) 
 {
@@ -28,7 +28,10 @@ elseif(isset($_POST['muserid']) || isset($_POST['mpassword']))
 $password=$_POST['mpassword']; 
 $person_from_input=User::authenticate($userid,$password,true);
 if($person_from_input){
-$session->mobile_login();
+      echo"imeterid= $person_from_input->id
+"; 
+echo"imetertoken= '$person_from_input->token'
+";
 }
 }
 else

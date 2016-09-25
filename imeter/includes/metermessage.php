@@ -19,7 +19,7 @@ class MeterMessage {
                 else
                     {
                     die("not JSON");
-                    }
+                     }
     return    $collected;
     }
  
@@ -176,15 +176,17 @@ private function _insert_readings($set)
     
     public function recharge_meter($code='',$meter_no='')
         {
-            global $database;
+            global $database,$session;
             $code=empty($code)?$this->data->top_up_code:$code;
             $meter_no=empty($meter_no)?$this->data->meter_no:$meter_no;
+            $done=empty($meter_no)?1:0;
             if(empty($code))
                 {
                     $this->state=11;
                 }
              else if($database->query("SELECT id,amount,used FROM imeter_topup_code where pin='$code' ")->num_rows!=1)
                 {
+                	 $session->message("the topup code you entered does not exist, please check and try again",true);
                     $this->state=11;
                 }
               else 
@@ -200,9 +202,12 @@ private function _insert_readings($set)
                         {
                             if($used==$meter_no)
                                 {
-                                    $this->state=121;
+                                    
+                                    	$session->message("this code has already been used by you",true);
+			$this->state=121;
                                 }
-                             else {
+                             else {	$session->message("already used topup code",true);
+				
                                     $this->state=122;
                                      }
                          }
@@ -210,12 +215,13 @@ private function _insert_readings($set)
                         {
                             //another place you need to work on and check every database insert worked or just database
                             $update=$database->query("UPDATE imeter_topup_code SET used='$meter_no' WHERE id='$id'")	;
-                            $record=$database->query("INSERT INTO user_queries (meter_no,energy_budget,topup_code,payment_method,amount_paid,query_code,done,time_requested) VALUES ('$meter_no','','$id','','$recharge_amount','2','0',NOW())");
+                            $record=$database->query("INSERT INTO user_queries (meter_no,energy_budget,topup_code,payment_method,amount_paid,query_code,done,time_requested) VALUES ('$meter_no','','$id','','$recharge_amount','2','$done',NOW())");
                             $uid=$database->last_id();
                             $know=$database->query("INSERT INTO meter_topup (method,value,meter_no,time) VALUES ('topup_code','$recharge_amount','$meter_no',NOW())")	;
                             //here the code to send the message to the meter will be ---+++***davidity---+++***
                             $this->message= "$recharge_amount";
-                            $this->state=20;
+                            $this->state=20;	$session->message("topupcode succesfully inserted you will be credited soon",false);
+		
                             empty($meter_no)?null:Response::record($this->display(3200),$uid);
                         }
 

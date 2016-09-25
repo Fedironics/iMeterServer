@@ -103,7 +103,7 @@ public function login($user){
   public function mobile_login()
   {
       echo"imeterid= $this->_user_id
-";
+"; 
 echo"imetertoken= '$this->_token'
 ";
   }

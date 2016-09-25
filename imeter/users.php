@@ -99,11 +99,11 @@ $monthly_u=av_daily_energy($meter_no,'month');
 		if($bal->num_rows<1){$e_balance='0';}  
 	echo "
      <div class=\"col-md-4\">
-          <!-- Widget: user widget style 1 -->
+          <!-- Widget: user widget style 1 --> 
           <div class=\"box box-widget widget-user\">
             <!-- Add the bg color to the header using any of the bg-* classes -->
             <div class=\"widget-user-header bg-aqua-active\" style=\"background: url('images/meterbg.jpg') center center;\">
-              <h3 class=\"widget-user-username\"><a href='energy_profile.php?user=$id' >$name</a></h3>
+              <h3 class=\"widget-user-username\"><a href='energy_profile.php?user=$meter_no' > $name jkl</a></h3>
               <h5 class=\"widget-user-desc\">$place</h5>
             </div>
             <div class=\"widget-user-image\">";

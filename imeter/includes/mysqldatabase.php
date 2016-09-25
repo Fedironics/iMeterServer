@@ -33,7 +33,7 @@ class MySqlDatabase {
 		}
 	}
 	public function  query($sql){
-		// 		echo $sql."<br/>";
+		$this->sql=$sql;
 		//'		OR id='1 
             $result=$this->connection->query($sql);
             $this->_confirm_query($result);
@@ -41,6 +41,7 @@ class MySqlDatabase {
     }
     private function  _confirm_query($result){
            if(!$result){
+			   echo $this->sql;
           die("database query failed ".$this->connection->error);
       }  
     } 

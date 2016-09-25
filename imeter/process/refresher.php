@@ -17,8 +17,15 @@ $stored=Response::display_one();
 if($stored)
 {
 $stored_array=json_decode($stored,true);
-$stored_array['key']=$replies->data->key;
+$stored_array['key']=$replies->data->key; 
 echo $replies->show(json_encode($stored_array));
 
+}
+else
+{
+    $stored_array=[];
+    $stored_array['key']=$replies->data->key;
+  echo $replies->show(json_encode($stored_array));
+  
 }
 ?>

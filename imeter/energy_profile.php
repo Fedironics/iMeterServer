@@ -11,9 +11,11 @@ else {
 	header("Location:admin.php");	
 	} else {
 	$userid=$_GET['user'];
-      $profile=  User::find_by_id($userid);
+  $get_id=$database->query("SELECT id FROM user_informations WHERE meter_no='$userid'");
+  $id=fetch_as_array($get_id)[0];
+      $profile=  User::find_by_id($id);
       $meter_no=$profile->meter_no;
-$toscript="userenergy.php?user=$userid";
+$toscript="userenergy.php?user=$id";
 
 	}
 }
