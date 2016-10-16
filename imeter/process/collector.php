@@ -8,6 +8,7 @@ if(!isset($_POST['Password']))
 	die("no data recieved");
 }
 else{
+	
 	$replies=   MeterMessage::collector($_POST['Password']);
 	echo $replies->show($replies->output()); 
 }

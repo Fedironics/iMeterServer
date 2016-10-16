@@ -103,7 +103,7 @@ $monthly_u=av_daily_energy($meter_no,'month');
           <div class=\"box box-widget widget-user\">
             <!-- Add the bg color to the header using any of the bg-* classes -->
             <div class=\"widget-user-header bg-aqua-active\" style=\"background: url('images/meterbg.jpg') center center;\">
-              <h3 class=\"widget-user-username\"><a href='energy_profile.php?user=$meter_no' > $name jkl</a></h3>
+              <h3 class=\"widget-user-username\"><a href='energy_profile.php?user=$meter_no' > $name </a></h3>
               <h5 class=\"widget-user-desc\">$place</h5>
             </div>
             <div class=\"widget-user-image\">";
@@ -186,7 +186,7 @@ $monthly_u=av_daily_energy($meter_no,'month');
           <div class=\"box box-widget widget-user\">
             <!-- Add the bg color to the header using any of the bg-* classes -->
             <div class=\"widget-user-header bg-aqua-active\" style=\"background: url('images/meterbg.jpg') center center;\">
-              <h3 class=\"widget-user-username\"><a href='energy_profile.php?user=$id' >$name</a></h3>
+              <h3 class=\"widget-user-username\"><a href='energy_profile.php?user=$meter_no' >$name</a></h3>
               <h5 class=\"widget-user-desc\">$place</h5>
             </div>
             <div class=\"widget-user-image\">";

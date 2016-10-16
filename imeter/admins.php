@@ -23,12 +23,12 @@ if(!isset($_GET['page'])){
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Widgets
-        <small>Preview page</small>
+        Administrators 
+        <small>(Installers)</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Widgets</li>
+        <li><a href="index.php"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Administrators</li>
       </ol>
     </section>
 
@@ -38,8 +38,7 @@ if(!isset($_GET['page'])){
  
       <!-- =========================================================== -->
 
-      <h2 class="page-header">Social Widgets</h2>
-
+      
       <div class="row">
 	  
 	  	  <?php 
