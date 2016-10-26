@@ -14,10 +14,10 @@ else
 $status=$_POST['status'];
 
 if($status=='1')
-    {
+    { 
     
 $reply="Smart Connect : Succesfully Turned Power On";
-    $formatted_reply="5210";
+    $formatted_reply="7210";
 //that is to turn on
 $insert=$database->query("INSERT INTO user_queries (meter_no,energy_budget,topup_code,payment_method,amount_paid,query_code,done,time_requested) VALUES('$meter_no','','','$status','','3','0',NOW())");		
 
@@ -28,7 +28,7 @@ Response::record($formatted_reply,$query_id);
 }
 else {
 		//that is to turn off
-$formatted_reply="5210";
+$formatted_reply="7200";
 $reply="Smart Connect : Succesfully Turned Power Off";
 $insert=$database->query("INSERT INTO user_queries (meter_no,energy_budget,topup_code,payment_method,amount_paid,query_code,done,time_requested) VALUES('$meter_no','','','$status','','3','0',NOW())");		
 $query_id=$database->last_id();
