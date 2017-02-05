@@ -1,11 +1,7 @@
 <?php
 defined('DS')?null:define('DS', '\\');
 require_once SITE_ROOT.DS."includes".DS.'databasetable.php';
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 /**
  * Description of User
  *
@@ -25,6 +21,7 @@ public static function authenticate($username,$password,$mobile=false)
         $password=$database->escape_value($password);
         $sql= 'SELECT * FROM ';
         $sql.=static::$tableName. " WHERE userid='$username' AND password='$password'";
+       //get the user object from the database with all the table columns as attributes
         $person= static::find_by_sql($sql);
         if(!empty($person))
             {

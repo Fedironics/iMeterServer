@@ -18,8 +18,7 @@ $max_all=100;
 
 
 
-date_default_timezone_set("America/Los_Angeles");
-
+date_default_timezone_set("Africa/Lagos");
 
 
   //this function is to get the number of days the current month has
